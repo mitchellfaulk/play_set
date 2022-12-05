@@ -1,5 +1,11 @@
 import Deck from './deck.js'
 
+
+
+
+
+// declare some variables 
+
 const deckSlot = document.getElementById("deck")
 const foundSlot = document.getElementById("found")
 const addButton = document.getElementById("add-cards")
@@ -162,11 +168,20 @@ function checkForSET() {
 				table.splice(j,1);
 				table.splice(i,1);
 			} else if (deck.numberOfCards === 0) {
-				// remove the 
-				// just remove the card data 
+				// just remove the labels
+				let cardSlot1 = Slot1.parentNode;
+				let cardSlot2 = Slot2.parentNode;
+				let cardSlot3 = Slot3.parentNode;
+
+				cardSlot1.removeChild(Slot1);
+				cardSlot2.removeChild(Slot2);
+				cardSlot3.removeChild(Slot3);
+
+				// and remove the card data 
 				table.splice(k,1);
 				table.splice(j,1);
 				table.splice(i,1);
+
 			} else {
 
 				// draw cards from deck 
